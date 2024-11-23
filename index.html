@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+    </style>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        Bonjour !!!
+    </header>
+    <nav>
+        <div class="nav-bar">
+
+            <div class="logo">
+                <img  src="Free-Logos-PNG-File.png" alt="logo" title="logo" style="width: 50px; height: 50px;">
+            </div>
+        
+        <div class="btn">
+            <button onclick="showPage('home')">Accueil</button>
+            <button onclick="showPage('about')">À propos</button>
+            <button onclick="showPage('contact')">Contact</button>
+        </div>
+    </div>
+        
+
+
+    </nav>
+    <main>
+
+        <div id="home" class="page active">
+            <!-- Section Présentation -->
+            <div class="presentation">
+                <div class="img">
+                    <img src="Free-Logos-PNG-File.png" alt="logo" title="logo" style="width: 500px; height: 500px;">  
+                </div> 
+        
+                <div class="info">
+                    <div class="titre">
+                        <h1>Bienvenue sur mon site</h1>
+                        <div class="tp">
+                            <p>Bienvenue sur notre site spécialisé dans la vente de packs graphiques haute qualité pour FiveM ! 🎨✨ Que vous souhaitiez transformer l'apparence de votre serveur ou offrir une expérience visuelle immersive à vos joueurs, nos designs uniques et professionnels sont conçus pour répondre à tous vos besoins. Explorez notre collection et découvrez des graphismes qui donneront vie à votre serveur comme jamais auparavant. 🚀</p>
+                        </div>
+                        <div class="btnp">
+                            <button onclick="window.location.href='#produit'">Voir nos produits</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Section Produits -->
+            <div id="produit" class="product-section">
+                <h2 class="product-title">Nos Packs Graphiques</h2>
+                <div class="product-container">
+                    <!-- Carte Produit 1 -->
+                    <div class="product-card">
+                        <img src="pack1.jpg" alt="Pack Basic" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">Pack Basic FiveM</h3>
+                            <p class="product-description">Pack de base incluant les éléments essentiels pour votre serveur : HUD, inventaire et menu principal personnalisés.</p>
+                            <div class="product-price">29.99 €</div>
+                            <div class="product-btn">
+                                <button onclick="window.location.href='#'">Voir détails</button>
+                                <button onclick="window.location.href='#'">Acheter</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Carte Produit 2 -->
+                    <div class="product-card">
+                        <img src="pack1.jpg" alt="Pack Premium" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">Pack Premium FiveM</h3>
+                            <p class="product-description">Pack complet avec interfaces avancées, notifications personnalisées et systèmes de menu améliorés.</p>
+                            <div class="product-price">49.99 €</div>
+                            <div class="product-btn">
+                                <button onclick="window.location.href='#'">Voir détails</button>
+                                <button onclick="window.location.href='#'">Acheter</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Carte Produit 3 -->
+                    <div class="product-card">
+                        <img src="pack1.jpg" alt="Pack Ultimate" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">Pack Ultimate FiveM</h3>
+                            <p class="product-description">Notre pack le plus complet avec tous les éléments graphiques et des designs exclusifs.</p>
+                            <div class="product-price">79.99 €</div>
+                            <div class="product-btn">
+                                <button onclick="window.location.href='#'">Voir détails</button>
+                                <button onclick="window.location.href='#'">Acheter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte Produit 3 -->
+                    <div class="product-card">
+                        <img src="pack1.jpg" alt="Pack Opti" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">Pack Opti FiveM</h3>
+                            <p class="product-description">Notre pack le plus complet avec tous les éléments graphiques et des designs exclusifs.</p>
+                            <div class="product-price">79.99 €</div>
+                            <div class="product-btn">
+                                <button onclick="window.location.href='#'">Voir détails</button>
+                                <button onclick="window.location.href='#'">Acheter</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+
+
+                </div>
+
+                <div class="vp">
+                    <button class="plus" type="button">Voir plus</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="about" class="page">
+            <div class="about-container">
+                <!-- En-tête -->
+                <div class="about-header">
+                    <h1 class="about-title">À Propos de Nous</h1>
+                    <p class="about-subtitle">Experts en Design Graphique pour FiveM</p>
+                </div>
+        
+                <!-- Cartes de valeurs -->
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-card-icon">🎨</div>
+                        <h3 class="about-card-title">Design Créatif</h3>
+                        <p class="about-card-text">Nous créons des designs uniques et innovants qui donnent vie à votre serveur FiveM.</p>
+                    </div>
+        
+                    <div class="about-card">
+                        <div class="about-card-icon">⚡</div>
+                        <h3 class="about-card-title">Performance</h3>
+                        <p class="about-card-text">Nos designs sont optimisés pour garantir une expérience fluide sans impact sur les performances.</p>
+                    </div>
+        
+                    <div class="about-card">
+                        <div class="about-card-icon">🛠️</div>
+                        <h3 class="about-card-title">Support Premium</h3>
+                        <p class="about-card-text">Une assistance technique dédiée pour vous accompagner dans l'installation et l'utilisation.</p>
+                    </div>
+                </div>
+        
+                <!-- Contenu principal -->
+                <div class="about-content">
+                    <h2>Notre Histoire</h2>
+                    <p>Passionnés par le design et le gaming, nous avons créé cette plateforme pour offrir aux communautés FiveM des solutions graphiques professionnelles et personnalisées. Notre objectif est de transformer l'expérience utilisateur de votre serveur en la rendant unique et mémorable.</p>
+                    
+                    <h2>Notre Mission</h2>
+                    <p>Nous nous engageons à fournir des designs de haute qualité qui améliorent l'immersion et l'expérience utilisateur sur les serveurs FiveM. Chaque pack est créé avec attention aux détails et optimisé pour les meilleures performances.</p>
+                </div>
+        
+                <!-- Section équipe -->
+                <div class="team-section">
+                    <h2>Notre Équipe</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="1.jpg" alt="Membre 1" class="team-member-img">
+                            <h3 class="team-member-name">Alex Martin</h3>
+                            <p class="team-member-role">Designer Principal</p>
+                            <p class="team-member-bio">Expert en design UI/UX avec 5 ans d'expérience dans la création d'interfaces pour FiveM.</p>
+                        </div>
+        
+                        <div class="team-member">
+                            <img src="1.jpg" alt="Membre 2" class="team-member-img">
+                            <h3 class="team-member-name">Sophie Dubois</h3>
+                            <p class="team-member-role">Développeuse Front-end</p>
+                            <p class="team-member-bio">Spécialisée dans l'intégration et l'optimisation des interfaces utilisateur.</p>
+                        </div>
+        
+                        <div class="team-member">
+                            <img src="1.jpg" alt="Membre 3" class="team-member-img">
+                            <h3 class="team-member-name">Thomas Weber</h3>
+                            <p class="team-member-role">Support Technique</p>
+                            <p class="team-member-bio">Responsable du support client et de l'assistance technique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="contact" class="page">
+            <div class="contact-container">
+                <!-- En-tête -->
+                <div class="contact-header">
+                    <h1 class="contact-title">Contactez-nous</h1>
+                    <p class="contact-subtitle">Nous sommes là pour répondre à toutes vos questions</p>
+                </div>
+        
+                <div class="contact-grid">
+                    <!-- Informations de contact -->
+                    <div class="contact-info">
+                        <div class="info-group">
+                            <h3>📍 Adresse</h3>
+                            <p>123 Rue du Design</p>
+                            <p>75000 Paris, France</p>
+                        </div>
+        
+                        <div class="info-group">
+                            <h3>📞 Téléphone</h3>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+        
+                        <div class="info-group">
+                            <h3>✉️ Email</h3>
+                            <p>contact@votresite.com</p>
+                        </div>
+        
+                        <div class="info-group">
+                            <h3>⏰ Horaires</h3>
+                            <p>Lundi - Vendredi: 9h - 18h</p>
+                            <p>Samedi - Dimanche: Fermé</p>
+                        </div>
+        
+                        <div class="info-group">
+                            <h3>🌐 Réseaux Sociaux</h3>
+                            <div class="social-links">
+                                <a href="https://discord.gg/Dvn9YuVTJE" class="social-link">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Formulaire de contact -->
+                    <div class="contact-form">
+                        <form id="contactForm" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Nom complet</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+        
+                            <button type="submit" class="submit-btn">Envoyer le message</button>
+                        </form>
+                    </div>
+        
+                    <!-- Carte Google Maps -->
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.95410694686!2d2.276995233454731!3d48.85883773941345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sfr!2sfr!4v1637049713286!5m2!1sfr!2sfr"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <aside>
+        
+    </aside>
+
+    <footer>
+        <div class="contact"  id="contact" >
+            <h1>Contact</h1>
+            <p>Contactez-nous à cette adresse email : contact@example.com</p>
+        </div>
+    </footer>
+
+
+
+    
+
+</body>
+</html>

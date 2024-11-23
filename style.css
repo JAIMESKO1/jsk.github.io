@@ -1,0 +1,651 @@
+:root{
+    --color-fond: rgba(255, 255, 255, 0.144);
+    --color-theme: rgb(98,101,253);
+    --color-btn:  #6265ff;
+    --background-color:rgb(32, 32, 31);
+    --border:  1px solid rgba(180, 173, 173, 0.568);
+    --fonts-color:  rgb(255, 255, 255);
+    --btn-hover-color: rgb(255, 255, 255);
+    --btn-box-shadow:0 0 20px rgb(0, 0, 0.5);
+    --product-card-hover-box-shadow: 0 5px 15px rgba(166, 145, 216, 0.452);
+    --color-price:  rgb(161, 163, 247);
+    --color-team-member:rgba(98, 100, 253, 0.082) ;
+    --p-color: rgba(255, 255, 255, 0.8);
+    --none: none;
+}
+
+body {
+    color: var(--fonts-color);
+    background-color: var(--background-color);
+    /* Ajout des propriétés pour l'image de fond fixe */
+    background-image: url('mylivewallpapers.com-Red-Satoru-Gojo-4K.mp4'); /* Remplacez par le chemin de votre image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Si vous voulez garder la couleur de fond avec une transparence par-dessus l'image */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color); /* Ajustez l'opacité selon vos besoins */
+    z-index: -1;
+}
+
+/* Pour l'image dans votre HTML */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+ 
+  
+  /* Header */
+header {
+  background-color: var(--color-theme);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border:var(--border);
+  margin: 0.5rem;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--color-theme);
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 100;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-right: auto;
+  
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Boutons */
+.btn {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+p{
+    color: var(--p-color);
+    
+}
+
+button {
+  background-color:var(--color-btn );
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: var(--border);
+  color: var(--fonts-color) ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color:var(--btn-hover-color) ;
+  color:var(--color-btn );
+  box-shadow: var(--btn-box-shadow);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Pages */
+.page {
+  display: var(--none);
+  padding: 1rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 100; }
+}
+
+.page.active {
+  display: block;
+}
+
+
+
+/* Section présentation */
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 2rem;
+  place-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.btnp{
+  margin-top: 40px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-theme);
+  margin-top: auto;
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .btn {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .presentation {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .img {
+    margin: 1rem 0;
+  }
+}
+
+/* Pour les très grands écrans */
+@media (min-width: 1400px) {
+  .presentation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
+/* Pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+  /* Section Produits */
+.product-section {
+    padding: 2rem;
+    background-color: var(--color-fond);
+    margin: 2rem 0.5rem;
+    border-radius: 10px;
+    border: var(--border);
+    
+}
+
+.product-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    place-items: center;
+    padding: 1rem;
+}
+
+.product-card {
+    background-color: var(--color-theme);
+    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px;
+    border: var(--border);
+    transition: transform 1s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--product-card-hover-box-shadow);
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-info {
+    padding: 1rem 0;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-price);
+    margin-bottom: 1rem;
+}
+
+.product-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+.product-btn button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Animation pour les cartes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Styles pour la page À propos */
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--color-btn);
+}
+
+.about-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-card {
+    background-color: var(--color-theme);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: var(--border);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-btn);
+}
+
+.about-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-card-text {
+    line-height: 1.6;
+}
+
+.about-content {
+    background-color: var(--color-fond);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.team-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background-color: var(--color-team-member);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border: var(--border);
+}
+
+.team-member:hover {
+    transform: scale(1.03);
+}
+
+.team-member-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--color-btn);
+}
+
+.team-member-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+    color: var(--color-btn);
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+    
+    .about-grid {
+        gap: 1rem;
+    }
+    
+    .team-grid {
+        gap: 1rem;
+    }
+}
+
+/* Styles pour la page Contact */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--color-btn);
+}
+
+.contact-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    background-color: var(--color-theme);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.info-group {
+    margin-bottom: 2rem;
+}
+
+.info-group h3 {
+    color: var(--color-btn);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-group p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    background-color: var(--color-btn);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    background-color: var(--color);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: var(--color-fond);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: var(--none);
+    border-color: var(--color-btn);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--color-btn);
+    color: white;
+    padding: 1rem 2rem;
+    border: var(--none);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.contact-map {
+    grid-column: 1 / -1;
+    background-color: var(--color-theme);
+    border-radius: 15px;
+    padding: 1rem;
+    height: 300px;
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: var(--none);
+    border-radius: 10px;
+}
+
+/* Animation des cartes */
+.contact-info, .contact-form {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-grid {
+        gap: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+}
+
+.vp {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+button.plus {
+    width: 500px;
+}
+
+
+#produit {
+   
+}
+
+.tp{
+    margin-top: 5px;
+}
